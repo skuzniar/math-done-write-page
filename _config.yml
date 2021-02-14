@@ -1,0 +1,44 @@
+# Site settings
+title: 'Math Done Write'
+description: 'Practice basic math skills'
+url: 'https://skuzniar.github.io/math-done-write-page'
+baseurl: '/math-done-write-page'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+disable_landing_page: true
+
+author:
+  name: 'Slawomir Kuzniar'
+  email: slawomir.kuzniar+math-done-write@gmail.com
+  #twitter_username: skuzniar
+  #facebook_username: skuzniar
+  #github_username:  skuzniar
+  #linkedin_username: skuzniar
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
